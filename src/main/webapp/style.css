@@ -1,0 +1,277 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ANIME BACKGROUND FOR ALL PAGES */
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            rgba(10, 5, 25, 0.50),
+            rgba(30, 10, 40, 0.50)
+        ),
+        url("https://wallpaperaccess.com/full/8956994.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #222;
+    padding-bottom: 40px;
+}
+
+/* HEADER */
+header {
+    padding: 22px 5%;
+    color: white;
+    text-align: center;
+    background: rgba(10, 8, 25, 0.65);
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a, nav span {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd6e7;
+    text-decoration: underline;
+}
+
+/* HOME PAGE HERO */
+.hero {
+    max-width: 760px;
+    margin: 120px auto;
+    text-align: center;
+    color: white;
+    padding: 50px 25px;
+
+    background: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+/* LOGIN AND REGISTER FORMS */
+.panel {
+    width: min(520px, 92%);
+    margin: 55px auto;
+
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(15px);
+
+    padding: 30px;
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,255,255,0.5);
+    box-shadow: 0 8px 28px rgba(16,9,28,0.4);
+}
+
+.panel h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #42234e;
+}
+
+/* FORMS */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin: 12px 0 5px;
+}
+
+input, textarea {
+    padding: 11px;
+    border: 1px solid #bbb;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #743c78;
+    box-shadow: 0 0 5px rgba(116,60,120,0.4);
+}
+
+/* BUTTONS */
+button, .btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 7px;
+
+    background: #743c78;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+    background: #4d2854;
+    transform: translateY(-2px);
+}
+
+.hint {
+    font-size: 13px;
+    color: #555;
+    margin: 18px 0;
+}
+
+.message {
+    color: #9a2448;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* ADMIN AND ANIME PAGES */
+.wide {
+    width: min(1100px, 94%);
+    margin: 45px auto;
+
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+
+    padding: 28px;
+    border-radius: 16px;
+}
+
+.wide h2 {
+    margin-bottom: 20px;
+    color: #42234e;
+}
+
+.topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #eaddec;
+    color: #42234e;
+}
+
+td a {
+    color: #713d78;
+    font-weight: bold;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline button {
+    margin: 0 0 0 8px;
+    padding: 7px 10px;
+}
+
+.danger {
+    background: #a8324a;
+}
+
+/* ANIME CARDS */
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.anime-card {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e1d4e4;
+    border-radius: 13px;
+    box-shadow: 0 3px 12px #24132b18;
+}
+
+.anime-card h3 {
+    color: #743c78;
+    margin-bottom: 12px;
+}
+
+.anime-card p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width: 600px) {
+
+    .hero {
+        margin: 60px auto;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .topline {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 7px;
+    }
+}
